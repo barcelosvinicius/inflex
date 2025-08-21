@@ -69,7 +69,7 @@ public class Principal {
         //Total de salários por funcionário
         BigDecimal totalSalario = funcionarios.stream().map(Funcionario::getSalario)
         		.reduce(BigDecimal.ZERO, BigDecimal::add);
-        System.out.println("\nO valor total dos salários é de: " + Funcionario.formatarSalario(totalSalario));
+        System.out.println("\nO valor total dos salários é de: " + FormatoMonetario.formatarSalario(totalSalario));
         
         //Quantidade de salários mínimos por funcionário
         BigDecimal salarioMinimo = new BigDecimal("1212.00");
